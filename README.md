@@ -1,2 +1,2 @@
 # sql-data-warehouse-project
-Modern sql data warehouse
+Building a modern sql data warehouse
