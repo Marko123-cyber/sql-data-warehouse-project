@@ -1,38 +1,31 @@
-/*
----------------------------------------------------
----------------------------------------------------
-
-Script Purpose:
-    This script creates a new databse DataWarehouse after checking if it exists. If it exists it is dropped
-    and recreated. Within DataWarehouse 3 schemas are created bronze, silver and gold.
-
-Warning:
-    Running this script will drop DataWarehouse database if it already exists. All data from the database will 
-    get permanently deleted. Proceed causously and ensure you have proper backups before run ning script.
+/* 
+Script creates a DataWarehouse database with bronze, silver and gold schemas. After that it checks if schemas are created. 
+Warning: By running this script DataWarehouse dataset will be recreated and you'll lose all the data from it unless you've created a backup. 
 */
+USE master; 
 
 
-USE master;
+IF EXISTS(SELECT 1 from sys.databases where name='DataWarehouse')
+    BEGIN
+        ALTER DATABASE DataWarehouse 
+        SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+        DROP DATABASE DataWarehouse;
+    END;
 
-if exists(select 1 from sys.databases where name='DataWarehouse')
-begin
-    alter database DataWarehouse set SINGLE_USER  with rollback immediate;
-    drop database  DataWarehouse;
-end;
+CREATE DATABASE DataWarehouse;
+go
+USE DataWarehouse
 go
 
+CREATE SCHEMA bronze; 
+go 
 
-create database  DataWarehouse;
+CREATE SCHEMA silver; 
+go 
+
+CREATE SCHEMA gold;
 go
 
-use DataWarehouse;
-go
-
-create  schema bronze;
-go
-
-create  schema silver;
-go
-
-create  schema gold;
-go
+SELECT * FROM 
+sys.schemas 
+WHERE name in ('bronze', 'silver', 'gold');
