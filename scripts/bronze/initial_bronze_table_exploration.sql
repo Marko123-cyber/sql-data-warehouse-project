@@ -1,25 +1,26 @@
-select top(1000)
-    *
-from  DataWarehouse.bronze.crm_cust_info;
+CREATE PROCEDURE bronze.show_tables as
+BEGIN
 
-select top(1000)
-    *
-from bronze.crm_prd_info;
-
-select top(1000)
-    *
-from bronze.crm_sales_details;
-
-select top(1000)
-    *
-from bronze.erp_cust_az12;
+select * 
+from bronze.crm_cust_info; 
 
 
-select top(1000)
-    *
-from bronze.erp_loc_a101;
+select * 
+from bronze.crm_prd_info; 
 
+select * 
+from bronze.crm_sales_details; 
 
-select top(1000)
-    *
-from bronze.erp_px_cat_g1v2;
+select * 
+from bronze.erp_cust_az12; 
+
+select * 
+from bronze.erp_loc_a101; 
+
+select * 
+from bronze.erp_px_cat_g1v2; 
+
+END;
+go
+
+EXEC bronze.show_tables;
