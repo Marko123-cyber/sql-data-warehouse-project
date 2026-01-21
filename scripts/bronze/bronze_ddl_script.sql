@@ -1,105 +1,96 @@
+/* 
+This script makes tables with columns with data types corresponding to ones in csv fiels in 
+crm and erp folders
+*/
+
 USE DataWarehouse;
 GO
 
-/* ===============================
-   CRM CUSTOMER INFO
-   =============================== */
 IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
-    DROP TABLE bronze.crm_cust_info;
+    BEGIN 
+        DROP TABLE bronze.crm_cust_info;
+    END;
 GO
+CREATE TABLE bronze.crm_cust_info(
+    cst_id INT, 
+    cst_key NVARCHAR(50), 
+    cst_firstname NVARCHAR(50), 
+    cst_lastname NVARCHAR(50), 
+    cst_marital_status NVARCHAR(50), 
+    cst_gndr NVARCHAR(50), 
+    cst_create_date DATE
+); 
+go 
 
-CREATE TABLE bronze.crm_cust_info (
-    cst_id INT,
-    cst_key NVARCHAR(50),
-    cst_first_name NVARCHAR(50),
-    cst_last_name NVARCHAR(50),
-    cst_marital_status NVARCHAR(50),
-    cst_gndr NVARCHAR(50),
-    cst_create_date NVARCHAR(50)
-);
-GO
 
 
-/* ===============================
-   CRM PRODUCT INFO
-   =============================== */
 IF OBJECT_ID('bronze.crm_prd_info', 'U') IS NOT NULL
-    DROP TABLE bronze.crm_prd_info;
+    BEGIN 
+        DROP TABLE bronze.crm_prd_info;
+    END;
 GO
-
 CREATE TABLE bronze.crm_prd_info (
-    prd_id NVARCHAR(50),
-    prd_key NVARCHAR(50),
-    prd_nm NVARCHAR(100),
-    prd_cost NVARCHAR(50),
-    prd_line NVARCHAR(50),
-    prd_start_dt NVARCHAR(50),
-    prd_end_dt NVARCHAR(50)
-);
+    prd_id INT, 
+    prd_key NVARCHAR(50), 
+    prd_nm NVARCHAR(50), 
+    prd_cost INT, 
+    prd_line NVARCHAR(50), 
+    prd_start_dt DATE, 
+    prd_end_dt DATE
+); 
+go 
+
+IF OBJECT_ID('bronze.crm_sales_orders', 'U') IS NOT NULL
+    BEGIN 
+        DROP TABLE bronze.crm_sales_orders;
+    END;
 GO
+CREATE TABLE bronze.crm_sales_orders (
+    sls_ord_num NVARCHAR(50), 
+    sls_prd_key NVARCHAR(50), 
+    sls_cust_id INT, 
+    sls_order_dt INT, 
+    sls_ship_dt INT, 
+    sls_sales INT, 
+    sls_quantity INT, 
+    sls_price INT 
+); 
+go 
 
 
-/* ===============================
-   CRM SALES DETAILS
-   =============================== */
-IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL
-    DROP TABLE bronze.crm_sales_details;
+IF OBJECT_ID('bronze.erp_cust_az12', 'U') IS NOT NULL
+    BEGIN 
+        DROP TABLE bronze.erp_cust_az12;
+    END;
 GO
-
-CREATE TABLE bronze.crm_sales_details (
-    sls_ord_num NVARCHAR(50),
-    sls_prd_key NVARCHAR(50),
-    sls_cust_id NVARCHAR(50),
-    sls_order_dt NVARCHAR(50),
-    sls_ship_dt NVARCHAR(50),
-    sls_due_dt NVARCHAR(50),
-    sls_sales NVARCHAR(50),
-    sls_quantity NVARCHAR(50),
-    sls_price NVARCHAR(50)
-);
-GO
+CREATE TABLE bronze.erp_cust_az12 (
+    cid NVARCHAR(50), 
+    bdate DATE, 
+    gen NVARCHAR(50)
+); 
+go
 
 
-/* ===============================
-   ERP LOCATION
-   =============================== */
 IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL
-    DROP TABLE bronze.erp_loc_a101;
+    BEGIN 
+        DROP TABLE bronze.erp_loc_a101;
+    END;
 GO
-
 CREATE TABLE bronze.erp_loc_a101 (
-    cid NVARCHAR(50),
+    cid NVARCHAR(50), 
     cntry NVARCHAR(50)
 );
-GO
+go 
 
 
-/* ===============================
-   ERP CUSTOMER
-   =============================== */
-IF OBJECT_ID('bronze.erp_cust_az12', 'U') IS NOT NULL
-    DROP TABLE bronze.erp_cust_az12;
-GO
-
-CREATE TABLE bronze.erp_cust_az12 (
-    cid NVARCHAR(50),
-    bdate NVARCHAR(50),
-    gen NVARCHAR(50)
-);
-GO
-
-
-/* ===============================
-   ERP PRODUCT CATEGORY
-   =============================== */
 IF OBJECT_ID('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
-    DROP TABLE bronze.erp_px_cat_g1v2;
+    BEGIN 
+        DROP TABLE bronze.erp_px_cat_g1v2;
+    END;
 GO
-
 CREATE TABLE bronze.erp_px_cat_g1v2 (
-    id NVARCHAR(50),
-    cat NVARCHAR(50),
-    subcat NVARCHAR(50),
-    maintenance NVARCHAR(50)
+    id NVARCHAR(50), 
+    cat NVARCHAR(50), 
+    subcat NVARCHAR(50), 
+    maintanance NVARCHAR(50)
 );
-GO
