@@ -1,3 +1,8 @@
+/*
+Script loads data from csv files into tables and calculates number of inserted rows and time taken for each loading operation of a certain table.
+Warning: By running the script you'll delete all the data you had in DataWarehouse tables before reinsertion.
+*/
+
 CREATE OR ALTER PROCEDURE bronze.load_bronze
 AS
 BEGIN
