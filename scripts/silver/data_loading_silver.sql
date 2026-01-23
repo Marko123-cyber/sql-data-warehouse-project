@@ -171,6 +171,7 @@ ERP Cust Loc
 =====================
 */
 
+
 --Clean table
 TRUNCATE TABLE silver.erp_loc_a101;
 INSERT INTO silver.erp_loc_a101
@@ -179,15 +180,16 @@ INSERT INTO silver.erp_loc_a101
     cntry
 )
 SELECT 
-     REPLACE(cid, '-', '') as cid,
-     CASE WHEN cntry LIKE N'USA%' THEN 'United States'
-          WHEN cntry LIKE N'US%' THEN 'United States'
-          WHEN cntry LIKE N'DE%' THEN 'Germany'
-          WHEN cntry LIKE N'Australia%' THEN 'Australia'
-          WHEN TRIM(cntry) = N'' THEN 'n/a'
-          ELSE cntry
-     END as cntry
+     REPLACE(cid, '-', '') AS cid,
+     CASE 
+          WHEN cntry LIKE '%USA%' THEN 'United States'
+          WHEN cntry LIKE '%US%' THEN 'United States'
+          WHEN cntry LIKE '%DE%' THEN 'Germany'
+          WHEN TRIM(REPLACE(REPLACE(REPLACE(cntry, CHAR(9), ''), CHAR(10), ''), CHAR(13), '')) = '' THEN 'n/a'
+          ELSE TRIM(REPLACE(REPLACE(REPLACE(cntry, CHAR(9), ''), CHAR(10), ''), CHAR(13), ''))
+     END AS cntry
 FROM bronze.erp_loc_a101;
+
 
 
 /* 
@@ -206,7 +208,7 @@ INSERT INTO silver.erp_px_cat_g1v2
     maintanance
 )
 select 
-REPLACE(id, '_', '-') as id,
+id,
 cat,
 subcat,
 case when maintanance like '%Yes%' then 'Yes'
