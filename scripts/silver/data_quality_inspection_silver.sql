@@ -1,6 +1,9 @@
 /* 
 Data quality inspection for silver tables. Most of code is just collection of bronze_data inspection just a bit modified in some cases or removed for our use case.
 */
+USE DataWarehouse;
+GO
+
 
 CREATE OR ALTER PROCEDURE silver.data_quality_check
 AS 
