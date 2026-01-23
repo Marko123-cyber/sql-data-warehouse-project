@@ -1,3 +1,6 @@
+USE DataWarehouse;
+GO
+
 CREATE PROCEDURE bronze.show_tables as
 BEGIN
 
