@@ -2,7 +2,8 @@
 Script checks data quality issues in bronze tables.
 */
 
-
+USE DataWarehouse;
+GO
 
 
 CREATE or ALTER PROCEDURE bronze.data_quality_check
