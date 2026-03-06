@@ -65,7 +65,8 @@ Run `innit_database.sql` to set up the database structure and schemas.
 
 In addition to the SQL implementation, I developed a custom **Customer & Product Analytics** dashboard. This phase was done entirely independently to provide visual insights into sales trends and customer demographics.
 
-🔗 **[View the Interactive Dashboard → Tableau Public - Customer & Product Analytics](#)**
+🔗 **View the Interactive Dashboard here:**  
+[Tableau Public - Customer & Product Analytics](https://public.tableau.com/app/profile/marko.pavlovic/viz/CustomerProductAnalytics/CustomerAnalytics)
 
 ---
 
