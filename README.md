@@ -14,7 +14,7 @@ A practical implementation of a modern SQL Data Warehouse using Microsoft SQL Se
 
 > *Preview may appear compressed — click the link below for the full interactive dashboard.*
 
-[Tableau Public - Customer & Product Analytics](https://public.tableau.com/app/profile/marko.pavlovic/viz/CustomerProductAnalytics/CustomerAnalytics)
+🔗  [Tableau Public - Customer & Product Analytics](https://public.tableau.com/app/profile/marko.pavlovic/viz/CustomerProductAnalytics/CustomerAnalytics)
 
 ---
 
