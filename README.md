@@ -4,10 +4,9 @@ A practical implementation of a modern SQL Data Warehouse using Microsoft SQL Se
 
 
 <p align="center">
-  <img src="CustomerAnalytics.png" width="48%"/>
-  <img src="ProductsAnalytics.png" width="48%"/>
+  <img src="CustomerAnalytics.png" width="48%" style="vertical-align: top"/>
+  <img src="ProductsAnalytics.png" width="48%" style="vertical-align: top"/>
 </p>
-
 
 
 > *Preview may appear compressed — click the link below for the full interactive dashboard.*
