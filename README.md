@@ -47,12 +47,6 @@ Run the [innit_database.sql](file:///home/marko/Desktop/data_warehouse_project/s
 
 ---
 
-## 🔍 Independent Work & Data Quality
-This project extends beyond the standard course material with:
-- **Advanced Testing**: Comprehensive scripts in `tests/` for deep data inspection and quality assurance, ensuring higher integrity than standard exercises.
-- **Custom ETL Logic**: Refined scripts for handling edge cases in CRM and ERP data integration.
-- **Independent Problem Solving**: Tackled complex data consistency issues discovered during the EDA phase.
-
 ## 📊 Analytics & Interactive Dashboard
 In addition to the SQL implementation, I developed a custom **Customer & Product Analytics** dashboard. This phase was done entirely independently to provide visual insights into sales trends and customer demographics.
 
