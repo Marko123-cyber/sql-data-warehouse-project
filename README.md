@@ -55,4 +55,4 @@ In addition to the SQL implementation, I developed a custom **Customer & Product
 
 ---
 > [!NOTE]
-> This project was developed as part of a learning journey following the "Data with Baraa SQL Mastery Course", featuring independent exercises, advanced testing, and custom visualizations not included in the original curriculum.
+> This project was developed as part of a learning journey following the "Data with Baraa SQL Mastery Course", featuring advanced testing, and custom visualizations not included in the original curriculum.
