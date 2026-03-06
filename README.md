@@ -6,7 +6,7 @@ A practical implementation of a modern SQL Data Warehouse using Microsoft SQL Se
 
 
 
-![Customer & Product Analytics](Customer%20%26%20Product%20Analytics.png)
+<img src="Customer & Product Analytics.png" width="600"/>
 
 
 
