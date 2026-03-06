@@ -3,12 +3,10 @@
 A practical implementation of a modern SQL Data Warehouse using Microsoft SQL Server Express. This project follows the **Medallion Architecture (Bronze, Silver, Gold)** and is based on the *"Data with Baraa SQL Mastery Course"*, featuring significant independent extensions, advanced data quality testing, and custom analytics.
 
 
-
-
-
-<img src="Customer & Product Analytics.png" width="400"/>
-
-
+<p align="center">
+  <img src="CustomerAnalytics.png" width="48%"/>
+  <img src="ProductsAnalytics.png" width="48%"/>
+</p>
 
 
 
@@ -78,6 +76,9 @@ Run `innit_database.sql` to set up the database structure and schemas.
 ## 📊 Analytics & Interactive Dashboard
 
 In addition to the SQL implementation, I developed a custom **Customer & Product Analytics** dashboard. This phase was done entirely independently to provide visual insights into sales trends and customer demographics.
+Customer Analytics — segment customers by value (New/Regular/VIP), identify top spenders, track retention and recency over time, and understand demographic spending patterns to guide marketing strategy.
+
+Products Performance Analytics — understand which products and categories drive the most revenue (Pareto/80-20), identify top-selling SKUs, analyze cost segments (Premium/Mid/Low), and support inventory and pricing decisions.
 
 🔗 **View the Interactive Dashboard here:**  
 [Tableau Public - Customer & Product Analytics](https://public.tableau.com/app/profile/marko.pavlovic/viz/CustomerProductAnalytics/CustomerAnalytics)
