@@ -75,6 +75,7 @@ Run `innit_database.sql` to set up the database structure and schemas.
 ## 📊 Analytics & Interactive Dashboard
 
 In addition to the SQL implementation, I developed a custom **Customer & Product Analytics** dashboard. This phase was done entirely independently to provide visual insights into sales trends and customer demographics.
+
 Customer Analytics — segment customers by value (New/Regular/VIP), identify top spenders, track retention and recency over time, and understand demographic spending patterns to guide marketing strategy.
 
 Products Performance Analytics — understand which products and categories drive the most revenue (Pareto/80-20), identify top-selling SKUs, analyze cost segments (Premium/Mid/Low), and support inventory and pricing decisions.
