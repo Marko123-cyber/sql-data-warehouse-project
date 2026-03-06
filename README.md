@@ -2,6 +2,17 @@
 
 A practical implementation of a modern SQL Data Warehouse using Microsoft SQL Server Express. This project follows the **Medallion Architecture (Bronze, Silver, Gold)** and is based on the *"Data with Baraa SQL Mastery Course"*, featuring significant independent extensions, advanced data quality testing, and custom analytics.
 
+
+
+
+
+![Customer & Product Analytics](Customer%20%26%20Product%20Analytics.png)
+
+
+
+
+
+
 ---
 
 ## 🏗️ Architecture Overview
